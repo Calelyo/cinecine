@@ -1,95 +1,124 @@
 import Image from 'next/image'
 import styles from './page.module.css'
+import imgPortadaTemp from './img/portadas/el_polo_sur_de_la_luna.png'
+import postUnoTemp from './img/posters/adoquines.jpg'
+import postDosTemp from './img/posters/azul.jpg'
+import postTresTemp from './img/posters/dedo_sangriento.jpg'
+import postCuatroTemp from './img/posters/el_polo_sur_de_la_luna.jpg'
+import postCincoTemp from './img/posters/falso.jpg'
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
+      <div className={styles.portada}>
+        <div className={styles.carrusel}>
+        <Image
+              src={imgPortadaTemp}
+              alt='PORTADA'
+              className={styles.portadaImg}
             />
-          </a>
         </div>
       </div>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className={styles.configContenedor}>
+        <div className={styles.config}>
+          <div className={styles.botonesPEGI}>
+            <button>Todo público</button>
+            <button>Todas</button>
+          </div>
+          <div className={styles.botonesDimensiones}>
+            <button>2D</button>
+            <button>3D</button>
+          </div>
+          <div className={styles.botonesIdioma}>
+            <button>Español</button>
+            <button>Subtítuladas</button>
+          </div>
+          <div className={styles.botonSoloEstrenos}>
+            <button>Solo Estrenos</button>
+          </div>
+          <div className={styles.verTodas}>
+            <button>Ver Todas</button>
+          </div>
+        </div>
       </div>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div className={styles.buscador}>
+        <input className={styles.inputBuscador} placeholder='Buscar' />
       </div>
+
+      <div className={styles.funciones}>
+
+      <div className={styles.posterContenido}>
+          <div className={styles.posterIndividual}>
+            <Image src={postUnoTemp}
+              alt='POSTER'
+              className={styles.postImgTemp}
+            />
+            <div className={styles.nombrePelicula}>
+              NOMBRE
+            </div>
+          </div>
+        </div>
+        
+        <div className={styles.posterContenido}>
+          <div className={styles.posterIndividual}>
+            <Image src={postDosTemp}
+              alt='POSTER'
+              className={styles.postImgTemp}
+            />
+            <div className={styles.nombrePelicula}>
+              NOMBRE
+            </div>
+          </div>
+        </div>
+        
+        <div className={styles.posterContenido}>
+          <div className={styles.posterIndividual}>
+            <Image src={postTresTemp}
+              alt='POSTER'
+              className={styles.postImgTemp}
+            />
+            <div className={styles.nombrePelicula}>
+              NOMBRE
+            </div>
+          </div>
+        </div>
+
+        <div className={styles.posterContenido}>
+          <div className={styles.posterIndividual}>
+            <Image src={postCuatroTemp}
+              alt='POSTER'
+              className={styles.postImgTemp}
+            />
+            <div className={styles.nombrePelicula}>
+              NOMBRE
+            </div>
+          </div>
+        </div>
+
+        <div className={styles.posterContenido}>
+          <div className={styles.posterIndividual}>
+            <Image src={postCincoTemp}
+              alt='POSTER'
+              className={styles.postImgTemp}
+            />
+            <div className={styles.nombrePelicula}>
+              NOMBRE
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <footer className={styles.pie}>
+        <div className={styles.pieWeb}>
+          calelsprumont.web.app
+        </div>
+        <div className={styles.pieContacto}>
+          LinedIn
+        </div>
+      </footer>
     </main>
   )
 }
