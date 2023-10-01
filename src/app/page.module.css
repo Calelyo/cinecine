@@ -55,7 +55,37 @@
   color: white;
   font-size: 0.7rem;
   padding: 5px 16px;
+
+  cursor: pointer;
 }
+.config button:hover{
+  background-color: var(--rojo-tres-dos);
+}
+.config button.activado{
+  background-color: var(--rojo-dos);
+  cursor: auto;
+}
+
+.config button:first-child{
+  border-radius: 5px 0px 0px 5px;
+}
+.config button:last-child{
+  border-radius: 0px 5px 5px 0px;
+}
+.botonSoloEstrenos button:first-child{
+  border-radius: 5px;
+}
+.verTodas button:first-child{
+  border-radius: 5px;
+  cursor: pointer;
+}
+.verTodas button.activado:first-child{
+  cursor: auto;
+}
+.botonesPEGI button:first-child{
+  border-radius: 5px;
+}
+
 
 .botonesPEGI{
 
