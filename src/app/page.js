@@ -11,6 +11,7 @@ const funciones = Funciones
 export default function Home() {
   const [funcionesActuales, setFuncionesActuales] = useState(funciones)
   const [funcionesTodas, setFuncionesTodas] = useState(funciones)
+  const [funcionesActualesSinBuscador, setFuncionesActualesSinBuscador] = useState(funciones)
 
   const [todoPublico, setTodoPublico] = useState(false)
   const [soloTresD, setSoloTresD] = useState(false)
@@ -19,6 +20,7 @@ export default function Home() {
   const [español, setEspañol] = useState(false)
   const [soloEstrenos, setSoloEstrenos] = useState(false)
   const [verTodas, setVerTodas] = useState(true)
+  const [buscador, setBuscador] = useState('')
 
   const [configActual, setConfigActual] = useState('')
 
@@ -111,6 +113,7 @@ export default function Home() {
     } else {
       setVerTodas(false)
     }
+    limpiarBuscador()
 
     // setConfigActual(config)
 
@@ -129,6 +132,8 @@ export default function Home() {
       }
     })
     setFuncionesActuales(funcionesFiltradas)
+    setFuncionesActualesSinBuscador(funcionesFiltradas)
+
 
   }, [todoPublico, soloTresD, soloDosD, español, subtitulada, soloEstrenos, verTodas])
 
@@ -146,6 +151,25 @@ export default function Home() {
 
   }, []);
 
+  //BUSCAR
+  useEffect(()=>{
+    const funcionesNuevas = []
+    const buscadorLimpio = buscador.toLowerCase()
+
+    funcionesActualesSinBuscador.forEach((fun) => {
+      const nombreLimpio = fun.nombre.toLowerCase()
+      if(nombreLimpio.includes(buscadorLimpio) && !funcionesNuevas.find((f)=>(f.id_pelicula === fun.id_pelicula))){
+        funcionesNuevas.push(fun)
+      }
+    })
+    
+    setFuncionesActuales(funcionesNuevas)
+    // console.log(buscador)
+  }, [buscador])
+
+  function limpiarBuscador(){
+    document.getElementById('buscador').value = ''
+  }
 
 
   return (
@@ -156,6 +180,7 @@ export default function Home() {
               src={imgPortadaTemp}
               alt='PORTADA'
               className={styles.portadaImg}
+              priority={true}
             />
         </div>
       </div>
@@ -184,7 +209,7 @@ export default function Home() {
       </div>
 
       <div className={styles.buscador}>
-        <input className={styles.inputBuscador} placeholder='Buscar' />
+        <input className={styles.inputBuscador} id='buscador' placeholder='Buscar' role='search' onChange={ (e) => setBuscador(e.target.value) }/>
       </div>
 
       <div className={styles.funciones}>

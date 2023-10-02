@@ -44,19 +44,19 @@ export const Peliculas = [
         },
         {
             id: 4,
-            nombre: 'Saguchito de Miga',
+            nombre: 'Sanguchito de Miga',
             PEGI: '13',
             sinopsis: 'En un futuro no muy lejano, una misión espacial de última generación se embarca en un viaje audaz para establecer la primera base lunar en el polo sur de la Luna. Mientras la tripulación enfrenta peligros desconocidos, conflictos internos y el aislamiento en la superficie lunar, descubren secretos que podrían cambiar la comprensión de la humanidad sobre el cosmos.',
             estreno: false,
             poster:  postersPeliculas('./sanguchito_de_miga.jpg'),
-            imagen: 'saguchito_poster',
+            imagen: 'sanguchito_poster',
             hay_funcion: true
         },
         {
             id: 5,
             nombre: 'Cómo Tocar el Bandoneón',
             PEGI: 'ATP',
-            sinopsis: 'En una pequeña y encantadora cafetería de Buenos Aires, la historia gira en torno a la creación de uno de los saguchitos de miga más icónicos de la ciudad. A través de los ojos del chef y su devoción por la comida, la película narra las historias de los clientes habituales y cómo este modesto platillo llega a ser más que una simple comida, convirtiéndose en un símbolo de amor y comunidad en el corazón de la ciudad.',
+            sinopsis: 'En una pequeña y encantadora cafetería de Buenos Aires, la historia gira en torno a la creación de uno de los sanguchitos de miga más icónicos de la ciudad. A través de los ojos del chef y su devoción por la comida, la película narra las historias de los clientes habituales y cómo este modesto platillo llega a ser más que una simple comida, convirtiéndose en un símbolo de amor y comunidad en el corazón de la ciudad.',
             estreno: false,
             poster: '',
             imagen: '',
