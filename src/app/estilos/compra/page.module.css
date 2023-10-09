@@ -1,0 +1,294 @@
+.seccionCompra{
+    display: flex;
+    justify-content: center;
+}
+
+.cajaCompra{
+    margin-top: 6vh;
+    width: 65vw;
+    height: 75vh;
+    background-color: var(--negro-dos);
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.contenidoCaja{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.imagenCaja{
+    width: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagen{
+    width: 190%;
+    height: auto;
+}
+
+.infoFuncionCaja{
+    width: 50%;
+    height: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.headerCompra{
+    margin-top: 2rem;
+    width: 90%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-size: 2.2rem;
+    white-space: nowrap;
+}
+
+.titulo::after{
+    content: '';
+    position: absolute;
+    bottom: -0.7rem;
+    width: 100%;
+    height: 0.2rem;
+    background-color: var(--rojo-uno);
+}
+
+.preCompra{
+    font-family: 'Lexend Deca';
+    font-weight: 500;
+}
+
+.informacionContenedor{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.diasContenedor{
+    display: flex;
+}
+
+.dias{
+
+}
+
+.diasIndividuales{
+    padding: 0.2rem 1rem;
+    margin: 0.2rem;
+    font-size: 0.9rem;
+}
+
+.seleccionado{
+    background-color: var(--rojo-uno);
+}
+
+.horariosContenedor{
+    margin-top: 1rem;
+    text-align: start;
+    padding: 0.2rem 0.5rem;
+}
+
+.horarios{
+    margin: 0.5rem 0;
+    font-size: 0.8rem;
+    padding: 0.2rem 0.5rem;
+    /* padding: 0.2rem 1rem 0.2rem 0.3rem; */
+}
+
+.detallesContenedor{
+    /* text-align: end; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.detalles{
+    font-size: 0.8rem;
+    margin-bottom: 1.5rem;
+    padding: 0.2rem 0.5rem 0.2rem 1rem;
+}
+
+.detalles3d{
+    color: rgb(167, 167, 167);
+    background-color: rgb(83, 83, 83);
+
+}
+
+.detallesPEGI{
+    border: solid 1px rgb(139, 139, 139);
+    padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+}
+
+
+.footerCompra{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.sinopsis{
+    margin-bottom: 1.5rem;
+
+}
+
+.cantidadContenedor{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.elegirCantidadContenedor{
+    margin-left: 1.5rem;   
+}
+
+.botonComprarContenedor{
+    margin-left: 1.5rem;
+}
+
+.botonCambiarCantidad{
+    padding: 0.3rem;
+    margin: 0.2rem;
+    background-color: var(--rojo-uno);
+    border: none;
+    cursor: pointer;
+}
+
+.elegirCantidadContenedor{
+    display: flex;
+    align-items: center;
+}
+
+.botonIzquierda{
+    border-radius: 20px 0 0 20px;    
+}
+.botonDerecha{
+    border-radius: 0 20px 20px 0;
+}
+
+.cantidadNumero{
+    color: black;
+    background-color: rgb(209, 209, 209);
+    width: 1.2rem;
+    height: 1.2rem;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: default;
+}
+
+.botonComprar{
+    background-color: var(--verde-uno);
+    color: white;
+    border: none;
+    padding: 0.3rem 0.5rem;
+    border-radius: 5px;
+
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1280px){
+    .contenidoCaja{
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .infoFuncionCaja{
+        width: 65%;
+    }
+
+    .titulo{
+        font-size: 2rem;
+    }
+
+    .imagenCaja{
+        width: 35%;
+    }
+
+    .imagen{
+        width: 500%;
+    }
+}
+
+@media screen and (max-width: 1100px){
+    .titulo{
+        font-size: 1.2rem;
+    }
+
+    .imagenCaja{
+        width: 35%;
+        position: relative;
+        left: 3rem;
+    }
+
+    .imagen{
+        width: 800%;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .cajaCompra{
+        margin-top: 3vh;
+        width: 90vw;
+        height: 85vh;
+    }
+
+    .contenidoCaja{
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .headerCompra{
+        margin-top: 1rem;
+    }
+
+    .infoFuncionCaja{
+        width: 100%;
+        height: 70%;
+    }
+
+    .informacionContenedor{
+        display: flex;
+        justify-content: space-around;
+        margin: 1.4rem 2rem;
+    }
+
+    .horariosContenedor{
+        /* margin-top: 0; */
+    }
+
+    .sinopsis{
+        font-size: 0.8rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .footerCompra{
+        margin-bottom: 3rem;
+    }
+
+    .imagenCaja{
+        width: 100%;
+        height: 30%;
+        position: relative;
+        left: 0rem;
+    }
+}

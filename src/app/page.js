@@ -3,8 +3,10 @@ import Image from 'next/image'
 import { useState, useEffect } from 'react'
 import styles from './page.module.css'
 import { Funciones } from './datos/Funciones'
+import Compra from './compra/[id_pelicula]/page'
 
 import imgPortadaTemp from './img/portadas/el_polo_sur_de_la_luna.png'
+import Link from 'next/link'
 
 const funciones = Funciones
 
@@ -214,14 +216,19 @@ export default function Home() {
 
       <div className={styles.funciones}>
 
-      {funcionesActuales.map(({id, poster, nombre}, i) => (
+      {funcionesActuales.map(({id, id_pelicula, poster, nombre}, i) => (
         poster != '' &&
         <div className={styles.posterContenido} key={id}>
           <div className={styles.posterIndividual}>
-              <Image src={poster}
-                alt={nombre}
-                className={styles.postImgTemp}
-              />
+
+            {/* ¿CAMIAR ID POR nombre_url? */}
+            
+            <Link href={`/compra/${id_pelicula}`}>
+                <Image src={poster}
+                  alt={nombre}
+                  className={styles.postImgTemp}
+                />
+              </Link>
           </div>
           <div className={styles.nombrePelicula}>
             {nombre}

@@ -28,6 +28,25 @@
   --verde-uno: #02A630;
 }
 
+@font-face {
+  font-family: 'Lexend Deca';
+  src: url('./fonts/LexendDeca-Regular.ttf');
+  /* font-style: normal; */
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Lexend Deca';
+  src: url('./fonts/LexendDeca-Bold.ttf');
+  font-style: bold;
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'Lexend Deca';
+  src: url('./fonts/LexendDeca-Light.ttf');
+  /* font-style: normal; */
+  font-weight: 300;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -40,6 +59,8 @@ body {
   /* overflow-x: hidden; */
 
   overflow-x: hidden;
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 300;
 }
 
 body {
