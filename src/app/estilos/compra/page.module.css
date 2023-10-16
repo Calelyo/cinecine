@@ -91,10 +91,10 @@
     padding: 0.2rem 1rem;
     margin: 0.2rem;
     font-size: 0.9rem;
+    cursor: pointer;
 }
-
-.seleccionado{
-    background-color: var(--rojo-uno);
+.diasIndividuales:hover{
+    background-color: rgb(49, 14, 14);
 }
 
 .horariosContenedor{
@@ -108,6 +108,10 @@
     font-size: 0.8rem;
     padding: 0.2rem 0.5rem;
     /* padding: 0.2rem 1rem 0.2rem 0.3rem; */
+    cursor: pointer;
+}
+.horarios:hover{
+    background-color: rgb(49, 14, 14);
 }
 
 .detallesContenedor{
@@ -121,17 +125,44 @@
     font-size: 0.8rem;
     margin-bottom: 1.5rem;
     padding: 0.2rem 0.5rem 0.2rem 1rem;
+    background-color: black;
+    cursor: pointer;
+}
+.detalles:hover{
+    background-color: rgb(49, 14, 14);
 }
 
 .detalles3d{
+    /* color: rgb(167, 167, 167);
+    background-color: rgb(83, 83, 83); */
+
+}
+
+.seleccionado{
+    background-color: var(--rojo-uno);
+}
+.seleccionado:hover{
+    background-color: var(--rojo-uno);
+}
+
+.detallesInhabilitado{
     color: rgb(167, 167, 167);
     background-color: rgb(83, 83, 83);
-
+}
+.detallesInhabilitado:hover{
+    color: rgb(167, 167, 167);
+    background-color: rgb(83, 83, 83);
+    cursor: default;
 }
 
 .detallesPEGI{
     border: solid 1px rgb(139, 139, 139);
     padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+    cursor: default;
+}
+
+.detallesPEGI:hover{
+    background-color: rgba(0, 0, 0, 0);
 }
 
 
@@ -147,9 +178,15 @@
 
 }
 
+.botonVolver{
+    text-decoration: none;
+    color: white;
+}
+
 .cantidadContenedor{
     display: flex;
-    justify-content: flex-end;
+    /* justify-content: flex-end; */
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -190,6 +227,7 @@
     justify-content: center;
     border-radius: 5px;
     cursor: default;
+    text-align: center;
 }
 
 .botonComprar{
@@ -202,6 +240,11 @@
     font-family: 'Lexend Deca', sans-serif;
     font-weight: 600;
     cursor: pointer;
+}
+
+.botonInhabilitado{
+    background-color: gray;
+    cursor: default;
 }
 
 @media screen and (max-width: 1280px){

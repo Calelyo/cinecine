@@ -1,13 +1,28 @@
 .main{
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 60vw;
+  /* width: 60vw; */
+  width: 52vw;
   margin: auto;
 }
 
 .portada{
+  position: relative;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.cartelEstrenos{
+  position: relative;
+  font-size: 2rem;
+  margin-top: 2rem;
+  color: white;
 }
 
 .carrusel{
@@ -16,17 +31,84 @@
   height: 30rem;
   overflow: hidden;
   border-radius: 20px;
+  position: relative;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
 
-  /* position: relative;
-  top: 7rem; */
-  margin-top: 5rem;
+.contenedorImgIndividual{
+  width: 100%;
+  height: auto;
+  position: relative;
+  right: 0%;
+  top: 0rem;
+  animation: carruselAnim alternate infinite 15s;
   display: flex;
   align-items: center;
+}
+
+@keyframes carruselAnim {
+  0%, 30% {
+    right: 0%;
+  }
+  35%, 65% {
+    right: 100%;
+  }
+  70%, 100% {
+    right: 200%;
+  }
 }
 
 .portadaImg{
   width: 100%;
   height: auto;
+  position: relative;
+  animation: portadaAnim cubic-bezier(0.43, -0.01, 0, 0.6) infinite 10s;
+  /* right: 0%; */
+  /* animation-delay: 1s; */
+}
+
+@keyframes portadaAnim {
+  0%{
+    top: -2rem;
+  }
+  60%{
+    top: -5rem;
+  }
+  100%{
+    top: -2rem;
+  }
+}
+
+.carruselCompra{
+  display: flex;
+  align-content: center;
+  align-items: center;
+  position: absolute;
+  top: 60%;
+  right: 1rem;
+  z-index: 10;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+}
+.comprarCarruselNombre{
+  color: white;
+  margin-right: 2rem;
+  margin-left: 0rem;
+}
+.comprarCarruselBoton{
+  text-decoration: none;
+  color: white;
+  border: solid 1px white;
+  padding: 6px 10px;
+  background-color: #02a63020;
+}
+.comprarCarruselBoton:hover{
+  background-color: #02a63040;
 }
 
 .configContenedor{
@@ -42,7 +124,8 @@
   display: flex;
   justify-content: flex-end;
   /* margin-right: 20vw; */
-  margin: 1.8rem 20vw 1.8rem 0;
+  /* margin: 1.8rem 20vw 1.8rem 0; */
+  margin: 1.8rem 24.5vw 1.8rem 0;
 }
 
 .config div{
@@ -212,6 +295,12 @@
 @media screen and (max-width: 720px){
   .portada{
     width: 130%;
+  }
+
+  .cartelEstrenos{
+    position: relative;
+    left: 3rem;
+    margin: 1rem;
   }
 
   .carrusel{

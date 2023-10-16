@@ -5,7 +5,9 @@ import styles from './page.module.css'
 import { Funciones } from './datos/Funciones'
 import Compra from './compra/[id_pelicula]/page'
 
-import imgPortadaTemp from './img/portadas/el_polo_sur_de_la_luna.png'
+import imgPortadaTemp from './img/portadas/el_polo_sur_de_la_luna_portada.png'
+import imgPortadaTemp2 from './img/portadas/azul_portada.png'
+import imgPortadaTemp3 from './img/portadas/lluvia_en_el_desierto_portada.png'
 import Link from 'next/link'
 
 const funciones = Funciones
@@ -177,13 +179,58 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.portada}>
+        <div className={styles.cartelEstrenos}>
+          Estrenos
+        </div>
         <div className={styles.carrusel}>
-        <Image
-              src={imgPortadaTemp}
-              alt='PORTADA'
-              className={styles.portadaImg}
-              priority={true}
-            />
+          <div className={styles.contenedorImgIndividual}>
+              <div className={styles.carruselCompra}>
+                <div className={styles.comprarCarruselNombre}>
+                  El Polo Sur De La Luna
+                </div>
+                <Link className={styles.comprarCarruselBoton} href={'/'}>
+                  ¡Ver!
+                </Link>
+              </div>
+              <Image
+                  src={imgPortadaTemp}
+                  alt='PORTADA'
+                  className={styles.portadaImg}
+                  priority={true}
+                />
+            </div>
+            <div className={styles.contenedorImgIndividual}>
+              <div className={styles.carruselCompra}>
+                  <div className={styles.comprarCarruselNombre}>
+                    Azul
+                  </div>
+                  <Link className={styles.comprarCarruselBoton} href={'/'}>
+                    ¡Ver!
+                  </Link>
+                </div>
+                <Image
+                  src={imgPortadaTemp2}
+                  alt='PORTADA'
+                  className={styles.portadaImg}
+                  priority={true}
+                />
+            </div>
+            <div className={styles.contenedorImgIndividual}>
+                <div className={styles.carruselCompra}>
+                  <div className={styles.comprarCarruselNombre}>
+                    Lluvia en el desierto
+                  </div>
+                  <Link className={styles.comprarCarruselBoton} href={'/'}>
+                    ¡Ver!
+                  </Link>
+                </div>
+              <Image
+                    src={imgPortadaTemp3}
+                    alt='PORTADA'
+                    className={styles.portadaImg}
+                    priority={true}
+                  />
+              </div>
         </div>
       </div>
 

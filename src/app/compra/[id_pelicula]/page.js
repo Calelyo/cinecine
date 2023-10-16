@@ -3,15 +3,27 @@ import styles from '../../estilos/compra/page.module.css'
 import { useState } from 'react'
 import Image from 'next/image'
 import { Funciones } from '../../datos/Funciones.js'
-import imgCaja from '../../img/portadas/el_polo_sur_de_la_luna.png'
+import imgCaja from '../../img/portadas/el_polo_sur_de_la_luna_portada.png'
 import { useEffect } from 'react'
+import Link from 'next/link'
 
 const funciones = Funciones;
 
 export default function Compra({ params }){
     const { id_pelicula } = params
 
-    const [funcionesPelicula, setFuncionesPelicula] = useState([])
+    const [funcionesPelicula, setFuncionesPelicula] = useState(getPelicula())
+    const [cantidadEntradas, setCantidadEntradas] = useState(1)
+    const [diaElegido, setDiaElegido] = useState('')
+    const [horaElegida, setHoraElegida] = useState('')
+    const [subtitulada, setSubtitulada] = useState(false)
+    const [tresD, setTresD] = useState(false)
+    const [tieneSubtitulos, setTieneSubtitulos] = useState(false)
+    const [tieneTresD, setTieneTresD] = useState(false)
+    
+    function puedeComprar(){
+        return (diaElegido == '' || horaElegida == '')
+    }
 
     function getPelicula(){
         const elegida = [];
@@ -20,14 +32,47 @@ export default function Compra({ params }){
                 elegida.push(f)
             }
         })
-        setFuncionesPelicula(elegida)
+        // setFuncionesPelicula(elegida)
+        return elegida
     }
 
     useEffect(()=>{
-        getPelicula()
-    })
+        const elegida = [];
+        funciones.forEach((f)=>{
+            if(f.id_pelicula == id_pelicula){
+                elegida.push(f)
+                setFuncionesPelicula(elegida)
+                f.tresD && setTieneTresD(true)
+                f.subtitulada && setTieneSubtitulos(true)
+            }
+        })
+    },[])
 
-    // IMPORTAR LAS FUNCIONES Y COMPARAR CON ID DE PELICULA (o algo así)
+    function cambiarCantidadEntradas(masMenos){
+        if(cantidadEntradas < 10){
+            if(masMenos == '+'){
+                setCantidadEntradas(cantidadEntradas+1)
+            }
+        }
+        if(cantidadEntradas > 1)
+            if(masMenos == '-'){
+                setCantidadEntradas(cantidadEntradas-1)
+            }
+        }
+
+    function horarios(){
+        return (<div className={styles.horariosContenedor}>
+                    <div className={`${styles.horarios} ${horaElegida === '14' && styles.seleccionado}`} onClick={()=>setHoraElegida('14')}>
+                        14:00
+                    </div>
+                    <div className={`${styles.horarios} ${horaElegida === '19' && styles.seleccionado}`} onClick={()=>setHoraElegida('19')}>
+                        19:00
+                    </div>
+                    <div className={`${styles.horarios} ${horaElegida === '22' && styles.seleccionado}`} onClick={()=>setHoraElegida('22')}>
+                        22:00
+                    </div>
+                </div>)
+    }
     // IF EN EL RETURN PARA QUE SOLO PUEDA RESIVIR UN NUMERO DEL 0 AL 13 (ids de películas)
     
     return(
@@ -39,43 +84,35 @@ export default function Compra({ params }){
 
                         <div className={styles.headerCompra}>
                             <div className={styles.titulo}>
-                                El Polo Sur De La Luna
+                                {funcionesPelicula[0].nombre}
                             </div>
 
                             <div className={styles.preCompra}>
                                 <div className={styles.informacionContenedor}>
                                     <div className={styles.diasContenedor}>
                                         <div className={styles.dias}>
-                                            <span className={`${styles.diasIndividuales} ${styles.seleccionado}`}>Hoy</span>
-                                            <div className={styles.horariosContenedor}>
-                                                <div className={`${styles.horarios} ${styles.seleccionado}`}>
-                                                    14:00
-                                                </div>
-                                                <div className={styles.horarios}>
-                                                    19:00
-                                                </div>
-                                                <div className={styles.horarios}>
-                                                    22:00
-                                                </div>
-                                            </div>
+                                            <span className={`${styles.diasIndividuales} ${diaElegido === 'hoy' && styles.seleccionado}`} onClick={()=>setDiaElegido('hoy')}>Hoy</span>
+                                            { diaElegido === 'hoy' && horarios() }
                                         </div>
                                         <div className={styles.dias}>
-                                            <span className={styles.diasIndividuales}>Mañana</span>
+                                            <span className={`${styles.diasIndividuales} ${diaElegido === 'mañana' && styles.seleccionado}`} onClick={()=>setDiaElegido('mañana')}>Mañana</span>
+                                            { diaElegido === 'mañana' && horarios() }
                                         </div>
                                         <div className={styles.dias}>
-                                            <span className={styles.diasIndividuales}>Pasado</span>
+                                            <span className={`${styles.diasIndividuales} ${diaElegido === 'pasado' && styles.seleccionado}`} onClick={()=>setDiaElegido('pasado')}>Pasado</span>
+                                            { diaElegido === 'pasado' && horarios() }
                                         </div>
                                     </div>
 
                                     <div className={`${styles.detallesContenedor}`}>
-                                        <div className={`${styles.detalles} ${styles.detalles3d}`}>
+                                        <div className={`${styles.detalles} ${styles.detalles3d} ${tresD && styles.seleccionado} ${!tieneTresD && styles.detallesInhabilitado}`} onClick={()=>setTresD(!tresD)}>
                                             3D
                                         </div>
-                                        <div className={`${styles.detalles} ${styles.detallesSubtitulada} ${styles.seleccionado}`}>
+                                        <div className={`${styles.detalles} ${styles.detallesSubtitulada} ${subtitulada && styles.seleccionado} ${!tieneSubtitulos && styles.detallesInhabilitado}`} onClick={()=>setSubtitulada(!subtitulada)}>
                                             Subtitulada
                                         </div>
                                         <div className={`${styles.detalles} ${styles.detallesPEGI}`}>
-                                            +13
+                                            {funcionesPelicula[0].PEGI != 'ATP' ? '+' : '' }{funcionesPelicula[0].PEGI}
                                         </div>
                                     </div>
                                 </div>
@@ -85,23 +122,28 @@ export default function Compra({ params }){
 
                         <div className={styles.footerCompra}>
                             <div className={styles.sinopsis}>
-                                En un futuro no muy lejano, una misión espacial de última generación se embarca en un viaje audaz para establecer la primera base lunar en el polo sur de la Luna. Mientras la tripulación enfrenta peligros desconocidos, conflictos internos y el aislamiento en la superficie lunar, descubren secretos que podrían cambiar la comprensión de la humanidad sobre el cosmos.
+                                {funcionesPelicula[0].sinopsis}
                             </div>
                             <div className={styles.cantidadContenedor}>
-                                Cantidad: 
+                                <div className={styles.contenedorBotonVolver}>
+                                    <Link href={'/'} className={styles.botonVolver}>
+                                        Volver
+                                    </Link>
+                                </div>
                                 <div className={styles.elegirCantidadContenedor}>
-                                    <button className={`${styles.botonIzquierda} ${styles.botonCambiarCantidad}`}>
+                                    Cantidad: 
+                                    <button className={`${styles.botonIzquierda} ${styles.botonCambiarCantidad}`} onClick={()=>cambiarCantidadEntradas('-')}>
                                         
                                     </button>
-                                    <div className={styles.cantidadNumero}>
-                                        1
-                                    </div>
-                                    <button className={`${styles.botonDerecha} ${styles.botonCambiarCantidad}`}>
+                                    <input className={styles.cantidadNumero} defaultValue={cantidadEntradas} readOnly>
+                            
+                                    </input>
+                                    <button className={`${styles.botonDerecha} ${styles.botonCambiarCantidad}`} onClick={()=>cambiarCantidadEntradas('+')}>
                                         
                                     </button>
                                 </div>
                                 <div className={styles.botonComprarContenedor}>
-                                    <button className={styles.botonComprar}>¡Comprar!</button>
+                                    <button className={`${styles.botonComprar} ${puedeComprar() && styles.botonInhabilitado}`} disabled={puedeComprar()} onClick={()=>{console.log('Comprado')}}>¡Comprar!</button>
                                 </div>
                             </div>
                         </div>
@@ -113,8 +155,9 @@ export default function Compra({ params }){
 
                     <div className={styles.imagenCaja}>
                         <Image
-                            src={imgCaja}
-                            alt={'POLO SUR'}
+                            src={funcionesPelicula[0].imagen}
+                            // src={imgCaja}
+                            alt={funcionesPelicula[0].nombre}
                             className={styles.imagen}
                         />
                     </div>
