@@ -210,6 +210,10 @@
   border-radius: 8px;
 }
 
+.peliculaNoEncontrada{
+  color: white;
+}
+
 
 .funciones{
   /* width: 100%; */
@@ -224,6 +228,20 @@
 
 .posterContenido{
   /* margin: 2rem;   */
+  transition: linear 0.05s;
+}
+.posterContenido:hover{
+  transform: scale(1.1);
+  filter: drop-shadow(-4px 5px 10px rgba(0, 0, 0, 0.6));
+
+  /* box-shadow: 0 0 15px green;
+  background: rgba(6, 197, 6, 0.2);
+  padding: 1rem; */
+
+  /* border: var(--verde-uno) solid 1px;
+  padding: 1rem; */
+
+  /* filter: drop-shadow(-4px 5px 10px rgba(0, 128, 0, 0.5)); */
 }
 
 .posterIndividual{
@@ -234,6 +252,12 @@
   width: 100%;
   height: auto;
 }
+.postImgTemp:hover{
+  border: green solid 3px;
+}
+/* .postImgTemp:hover{
+  transform: scale(1.1);
+} */
 
 .nombrePelicula{
   color: white;

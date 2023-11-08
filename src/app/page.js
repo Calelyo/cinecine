@@ -1,14 +1,14 @@
 'use client'
 import Image from 'next/image'
+import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import styles from './page.module.css'
 import { Funciones } from './datos/Funciones'
-import Compra from './compra/[id_pelicula]/page'
 
-import imgPortadaTemp from './img/portadas/el_polo_sur_de_la_luna_portada.png'
-import imgPortadaTemp2 from './img/portadas/azul_portada.png'
-import imgPortadaTemp3 from './img/portadas/lluvia_en_el_desierto_portada.png'
-import Link from 'next/link'
+// import Compra from './compra/[id_pelicula]/page'
+// import imgPortadaTemp from './img/portadas/el_polo_sur_de_la_luna_portada.png'
+// import imgPortadaTemp2 from './img/portadas/azul_portada.png'
+// import imgPortadaTemp3 from './img/portadas/lluvia_en_el_desierto_portada.png'
 
 const funciones = Funciones
 
@@ -16,6 +16,7 @@ export default function Home() {
   const [funcionesActuales, setFuncionesActuales] = useState(funciones)
   const [funcionesTodas, setFuncionesTodas] = useState(funciones)
   const [funcionesActualesSinBuscador, setFuncionesActualesSinBuscador] = useState(funciones)
+  const [funcionesEstrenos, setFuncionesEstrenos] =  useState([])
 
   const [todoPublico, setTodoPublico] = useState(false)
   const [soloTresD, setSoloTresD] = useState(false)
@@ -27,6 +28,15 @@ export default function Home() {
   const [buscador, setBuscador] = useState('')
 
   const [configActual, setConfigActual] = useState('')
+
+  function datosUrl(){
+    const tresdActivado = soloTresD ? 'con3d_' : 'sin3d_'
+    const subtitulosActivados = subtitulada ? 'consubtitulos' : 'sinsubtitulos'
+    const texto = tresdActivado + subtitulosActivados
+
+    
+    return texto
+  }
 
   function configIndividuales(){
     const nuevo = []
@@ -144,14 +154,19 @@ export default function Home() {
   // INICIO
   useEffect(() => {
     const funcionesActualesInicio = [];
+    const estrenos = []
 
     funcionesActuales.forEach((funcion) => {
       // POCO OPTIMO
       if(!funcionesActualesInicio.find((f) => (f.id_pelicula === funcion.id_pelicula)) ) {
         funcionesActualesInicio.push(funcion)
       }
+      if(funcion.estreno && !estrenos.find((f)=>(f.id_pelicula === funcion.id_pelicula))){
+        estrenos.push(funcion)
+      }
     })
     setFuncionesActuales(funcionesActualesInicio)
+    setFuncionesEstrenos(estrenos)
 
   }, []);
 
@@ -179,11 +194,30 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.portada}>
-        <div className={styles.cartelEstrenos}>
+        <h3 className={styles.cartelEstrenos}>
           Estrenos
-        </div>
+        </h3>
         <div className={styles.carrusel}>
-          <div className={styles.contenedorImgIndividual}>
+          {funcionesEstrenos.map(({nombre, imagen, id_pelicula, id})=>(
+            <div className={styles.contenedorImgIndividual} key={id}>
+              <div className={styles.carruselCompra}>
+                <h4 className={styles.comprarCarruselNombre}>
+                  {nombre}
+                </h4>
+                <Link className={styles.comprarCarruselBoton} href={`/compra/${id_pelicula}`}>
+                  ¡Ver!
+                </Link>
+              </div>
+              <Image
+                src={imagen}
+                alt={`Portada ${nombre}`}
+                className={styles.portadaImg}
+                priority={true}
+                />
+            </div>
+          ))}
+
+            {/* <div className={styles.contenedorImgIndividual}>
               <div className={styles.carruselCompra}>
                 <div className={styles.comprarCarruselNombre}>
                   El Polo Sur De La Luna
@@ -198,39 +232,7 @@ export default function Home() {
                   className={styles.portadaImg}
                   priority={true}
                 />
-            </div>
-            <div className={styles.contenedorImgIndividual}>
-              <div className={styles.carruselCompra}>
-                  <div className={styles.comprarCarruselNombre}>
-                    Azul
-                  </div>
-                  <Link className={styles.comprarCarruselBoton} href={'/'}>
-                    ¡Ver!
-                  </Link>
-                </div>
-                <Image
-                  src={imgPortadaTemp2}
-                  alt='PORTADA'
-                  className={styles.portadaImg}
-                  priority={true}
-                />
-            </div>
-            <div className={styles.contenedorImgIndividual}>
-                <div className={styles.carruselCompra}>
-                  <div className={styles.comprarCarruselNombre}>
-                    Lluvia en el desierto
-                  </div>
-                  <Link className={styles.comprarCarruselBoton} href={'/'}>
-                    ¡Ver!
-                  </Link>
-                </div>
-              <Image
-                    src={imgPortadaTemp3}
-                    alt='PORTADA'
-                    className={styles.portadaImg}
-                    priority={true}
-                  />
-              </div>
+            </div> */}
         </div>
       </div>
 
@@ -269,19 +271,24 @@ export default function Home() {
           <div className={styles.posterIndividual}>
 
             {/* ¿CAMIAR ID POR nombre_url? */}
-            
-            <Link href={`/compra/${id_pelicula}`}>
+            {/* _${nombre} */}
+            <Link href={`/compra/${id_pelicula}_${nombre}_${datosUrl()}`}>
                 <Image src={poster}
                   alt={nombre}
                   className={styles.postImgTemp}
+                  priority={true}
                 />
               </Link>
           </div>
-          <div className={styles.nombrePelicula}>
+          <h5 className={styles.nombrePelicula}>
             {nombre}
-          </div>
+          </h5>
         </div>
       ))}
+      {funcionesActuales.length == 0 && 
+      <div className={styles.peliculaNoEncontrada}>
+        No se encontró la película
+      </div>}
 
         {/* <div className={styles.posterContenido}>
             <div className={styles.posterIndividual}>
