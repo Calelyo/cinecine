@@ -80,15 +80,41 @@ body {
   display: flex;
   align-items: center;
   position: relative;
+  z-index: 9;
 }
 
 .cinecine{
   position: absolute;
   /* left: 20vw; */
-  left: 2rem;
+  left: 3rem;
+}
+
+.cinecineLogo{
+  width: 30%;
+  height: auto;
+}
+
+.cinecineUno{
+  opacity: 0;
+  animation: unoAnim 8s infinite alternate;
+}
+@keyframes unoAnim {
+  0%{opacity: 1;};50%{opacity: 0;};100%{opacity: 1;};
+}
+.cinecineDos{
+  opacity: 1;
+  animation: dosAnim 8s infinite alternate;
+}
+@keyframes dosAnim {
+  0%{opacity: 0;};50%{opacity: 1;};100%{opacity: 0;};
 }
 
 .info{
   position: absolute;
-  right: 5rem;
+  right: 3rem;
+}
+
+.infoImg{
+  width: 2.2rem;
+  height: auto;
 }

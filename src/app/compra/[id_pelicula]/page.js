@@ -3,9 +3,11 @@ import styles from '../../estilos/compra/page.module.css'
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { Funciones } from '../../datos/Funciones.js'
+import { Peliculas } from '../../datos/Peliculas.js'
 import Link from 'next/link'
 
 const funciones = Funciones;
+const peliculas = Peliculas;
 
 export default function Compra({ params }){
     // const { id_pelicula } = params
@@ -52,6 +54,16 @@ export default function Compra({ params }){
         })
         // setFuncionesPelicula(elegida)
         return elegida
+    }
+
+    function getHayFuncion(){
+        const peli = [{hay_funcion: false}]
+        peliculas.forEach((p)=>{
+            if(p.id == id_pelicula){
+                peli.unshift(p)
+            }
+        })
+        return peli[0];
     }
 
     // INICIO
@@ -124,6 +136,9 @@ export default function Compra({ params }){
         // <div>{ id_pelicula }</div>
         <section className={styles.seccionCompra}>
             <div className={styles.cajaCompra}>
+                {
+                getHayFuncion().hay_funcion ?
+
                 <div className={styles.contenidoCaja}>
                     <div className={styles.infoFuncionCaja}>
 
@@ -132,7 +147,7 @@ export default function Compra({ params }){
                                 {funcionesPelicula[0].nombre}
                             </h2>
 
-                            <div className={styles.preCompra}>
+                            <div className={`${styles.preCompra} ${compraConfirmada && styles.preCompraDesactivada}`}>
                                 <div className={styles.informacionContenedor}>
                                     <div className={styles.diasContenedor}>
                                         <div className={styles.dias}>
@@ -171,7 +186,7 @@ export default function Compra({ params }){
                             </div>
                         </div>
 
-                        <div className={styles.footerCompra}>
+                        <div className={`${styles.footerCompra} ${compraConfirmada && styles.footerCompraDesactivada}`}>
                             <div className={styles.sinopsis}>
                                 {funcionesPelicula[0].sinopsis}
                             </div>
@@ -197,6 +212,8 @@ export default function Compra({ params }){
                                     <button className={`${styles.botonComprar} ${puedeComprar() && styles.botonInhabilitado}`} disabled={puedeComprar()} onClick={()=>{setConfirmacion(true)}}>¡Comprar!</button>
                                 </div>
                             </div>
+                        
+                        </div>
 
                             {compraConfirmada && 
                                 <div className={styles.compraConfirmadaContenedor}>
@@ -217,8 +234,6 @@ export default function Compra({ params }){
                                 </div>
                             }
                         </div>
-                        
-                    </div>
                             {/* <div className={styles.postCompra}></div> */}
 
 
@@ -231,7 +246,10 @@ export default function Compra({ params }){
                             priority={true}
                         />
                     </div>
-                </div>
+                </div> 
+                :
+                <div className={styles.sinFuncion}>No hay función disponible</div>
+                }
 
                 {
                 confirmacion && 

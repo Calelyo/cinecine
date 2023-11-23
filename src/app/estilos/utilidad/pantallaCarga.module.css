@@ -1,0 +1,81 @@
+.seccionCargando{
+    color: white;
+    background-color: var(--negro-tres);
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+}
+
+.seccionCargando.contenedorListo{
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.contenedorAnimacionCargando{
+    background-color: var(--rojo-uno);
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+.contenedorAnimacionCargando.listo{
+    height: 0;
+    transition: 0.2s;
+}
+
+.contenedorLogosAmbos{
+    /* border: solid white 2px; */
+    width: 50%;
+    height: 80%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(1);
+    transition: 0.2s ease-in;
+}
+.contenedorLogosAmbos.logosListo{
+    transform: scale(5);
+}
+
+.contenedorLogoCargando{
+    position: absolute;
+}
+
+.imgLogoAnimacion{
+    position: relative;
+}
+
+.imgLogoAnimacionUno{
+    opacity: 0;
+    animation: unoAnim 1s infinite alternate;
+}
+@keyframes unoAnim {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.imgLogoAnimacionDos{
+    opacity: 1;
+    animation: dosAnim 1s infinite alternate;
+}
+@keyframes dosAnim {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}

@@ -1,6 +1,24 @@
 .seccionCompra{
     display: flex;
     justify-content: center;
+    position: relative;
+
+    top: 0rem;
+    opacity: 1;
+    animation: seccionCompraAnim .3s cubic-bezier(1, 1, 1, 1);
+}
+@keyframes seccionCompraAnim {
+    0%{opacity: 0; top: -5rem;};100%{opacity: 1; top: 0rem;}
+}
+
+.sinFuncion{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 100%;
+    height: 100%;
+    font-size: 1.5rem;
 }
 
 .cajaCompra{
@@ -73,6 +91,9 @@
 .preCompra{
     font-family: 'Lexend Deca';
     font-weight: 500;
+}
+.preCompra.preCompraDesactivada{
+    display: none;
 }
 
 .informacionContenedor{
@@ -178,6 +199,10 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 2rem;
+}
+
+.footerCompra.footerCompraDesactivada{
+    display: none;
 }
 
 .sinopsis{
@@ -345,7 +370,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--negro-dos);
+    /* background-color: var(--negro-dos); */
     /* background-color: green; */
     width: 100%;
     height: 86%;
@@ -404,6 +429,15 @@
     .imagen{
         width: 500%;
     }
+
+    .confirmaciónCaja{
+        width: 70%;
+        height: 20%;
+    }
+
+    .compraConfirmadaContenedor{
+        /* height: 93%; */
+    }
 }
 
 @media screen and (max-width: 1100px){
@@ -419,6 +453,10 @@
 
     .imagen{
         width: 800%;
+    }
+
+    .compraConfirmadaContenedor{
+        height: 89%;
     }
 }
 
