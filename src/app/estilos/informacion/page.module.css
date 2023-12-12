@@ -1,3 +1,647 @@
 .seccionInfo{
     color: white;
+    display: flex;
+    flex-direction: column;
+    background-color: #A61414;
+}
+
+/* ------------- PAGINA 1 ------------- */
+
+.paginaUno{
+    width: 100vw;
+    height: calc(100vh - 8vh);
+    background: var(--negro-uno);
+}
+
+.contenedorPaginaUno{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.historiaTitulo{
+    font-size: 2.5rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.infoPaginaUno{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+}
+
+.paginaUnoLineas{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem 0;
+}
+
+.paginaUnoLineasImgs{
+    display: flex;
+    align-items: center;
+    width: 40%;
+    /* justify-content: space-evenly; */
+    justify-content: space-between;
+}
+
+.logoPagUnoimg{
+    transform: scale(1);
+    transition: linear 0.3s;
+}
+
+.zoomLogo{
+    transform: scale(1.08);
+}
+
+.paginaUnoParrafo{
+    width: 40%;
+    font-size: 1.2rem;
+}
+
+.paginaUnoLineaTres{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.lineaTresImgs{
+    /* display: flex;
+    justify-content: space-between; */
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+}
+
+
+
+
+
+
+/* ------------- PAGINA 2 ------------- */
+
+.paginaDos{
+    background-color: #A61414;
+    display: flex;
+    justify-content: center;
+}
+
+.contenedorPaginaDos{
+    /* width: 60%; */
+    width: 100%;
+    /* margin: 6rem; */
+    margin: 6rem 0;
+}
+
+/* .paginaDosLineaUno{
+    display: flex;
+    justify-content: center;
+} */
+.paginaDosLineas{
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+/* .contenedorHistoriaDeUsuario{
+    background-color: #262626;
+    padding: 3rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+.paginaDosContenedoresImgs{
+    background-color: #262626;
+    padding: 3rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedorHistoriaDeUsuario{
+    /* width: 30%; */
+    width: auto;
+    height: auto;
+}
+
+/* .mapaDeSitioImg{
+    width: 100%;
+    height: auto;
+} */
+.paginasDosImgs{
+    width: 100%;
+    height: auto;
+}
+
+.contenedorConector{
+    position: relative;
+    /* border: solid wheat; */
+    display: flex;
+    align-items: center;
+    width: 10%;
+}
+.conector{
+    /* border: solid red; */
+    width: 100%;
+    display: flex;
+    position: relative;
+    /* right: 0; */
+    top: -1.5rem;
+    justify-content: flex-end;
+    align-items: center;;
+    
+    height: 5.2rem;
+}
+.conectorLinea{
+    background-color: #d6d6d6;
+    width: 5rem;
+    position: relative;
+    bottom: 0;
+    
+    height: 2px;
+}
+.conectorPunto{
+    background-color: #d6d6d6;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 10rem;
+}
+
+
+/* .historiaDeUsuarioInfo{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.historiaDeUsuarioInfo *{
+    background-color: #851010;
+}
+
+.historiaDeUsuarioInfo h4{
+    border: solid 1px #d6d6d6;
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.5rem;
+    padding: 5px;
+    border-radius: 10px 10px 0px 0px;
+}
+.historiaDeUsuarioInfo p{
+    border: solid 1px #d6d6d6;
+    padding: 1.5rem;
+} */
+.paginaDosInfos{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* margin-left: 15%; */
+}
+
+.paginaDosInfos *{
+    background-color: #851010;
+}
+
+.paginaDosInfos h4{
+    border: solid 1px #d6d6d6;
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.5rem;
+    padding: 5px;
+    border-radius: 10px 10px 0px 0px;
+    /* white-space: nowrap; */
+}
+.paginaDosInfos p{
+    border: solid 1px #d6d6d6;
+    padding: 1.5rem;
+}
+
+
+.paginaDosLineaDos{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.conectorDos{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.paginaDosLineaTres{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.mapaDeSitioDosInfo p{
+    /* border-radius: 10px; */
+}
+
+.conectorTres *{
+    background-color: transparent;
+}
+
+
+
+
+
+/* ------------- PAGINA 3 ------------- */
+
+.paginaTres{
+    display: flex;
+    justify-content: center;
+    background: var(--negro-uno);
+}   
+
+.contenedorPaginaTres{
+    width: 60%;
+    margin: 5rem 0;
+    /* margin: 8rem 0; */
+    /* border: solid green; */
+}
+
+.paginaTresLineas{
+    display: flex;
+    /* border: solid blue; */
+}
+
+.paginaTresLineasIzquierda{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.paginaTresBloques{
+    /* display: flex;
+    flex-direction: column; */
+    width: 40%;
+    margin: 2rem 0;
+}
+
+.conHerramientaTitulos{
+    
+}
+
+.conHerramientaTitulo{
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+.conHerramientaSubtitulo{
+    font-weight: 300;
+    font-size: 1.2rem;
+    color: #FC0000;
+    margin: 0.1rem 0 1.4rem;
+}
+
+.conHerramientaImgs{
+    /* width: 70%;
+    height: auto; */
+    width: 30rem;
+}
+
+.conHerramientaImgs{
+    position: relative;
+}
+
+.conHerramientaContenedorImg{
+    position: relative;
+    width: auto;
+}
+
+.herramientaImg{
+    width: 100%;
+    height: auto;
+}
+
+.conHerramientaContenedorLogo{
+    position: absolute;
+    right: -1.2rem;
+    top: -1.2rem;
+
+    /* width: 5rem; */
+
+    width: 10%;
+    filter: drop-shadow(-1px 3px 4px black);
+}
+.herramientaImgLogo{
+    width: 100%;
+    height: auto;
+}
+
+.conStableContenedorLogo{position: absolute;right: 0;bottom: 0;}
+.stableImgLogo{position: absolute;left: 1.2rem;bottom: -1.2rem;}
+
+.conCalculoUnoContenedorLogo{position: absolute;left: 0;bottom: 0;}
+.calculoUnoImgLogo{position: absolute;left: -1.2rem;bottom: -1.2rem;}
+
+.conColabContenedorLogoPython{position: absolute;left: 0;bottom: 0;}
+.pythonImgLogo{position: absolute;left: -1.2rem;bottom: -1.2rem;}
+
+.bloqueParrafo{
+    /* width: 125%; */
+    width: 100%;
+}
+
+.bloqueParrafo p{
+    /* width: 60%; */
+    font-size: 1.1rem;
+    margin-top: 1.5rem;
+}
+
+.paginaTresBloqueCuatro{
+    margin-top: -5rem;
+}
+
+
+/* ------------- PAGINA 4 ------------- */
+
+.paginaCuatro{
+    background-color: #A61414;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedorPaginaCuatro{
+    width: 60%;
+    margin: 5rem 0;
+}
+
+.paginaCuatroLineas{
+    margin: 5rem 0;
+}
+
+.paginaCuatroBloquesTitulos h4{
+    color: white;
+    font-weight: 300;
+    font-size: 3rem;
+}
+.paginaCuatroBloquesTitulos h5{
+    color: #262626;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.bloquesInfoContenedoresImgs{
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+}
+
+.contenedoresLogosImg{
+    position: absolute;
+    right: -1.2rem;
+    bottom: -1.2rem;
+    /* width: 10%; */
+    filter: drop-shadow(-1px 3px 4px black);
+}
+
+.paginaCuatroBloquesInfo{
+    display: flex;
+}
+
+.paginaCuatroBloquesParrafos p{
+    font-size: 1.2rem;
+    margin-left: 3rem;
+}
+
+.capturas{
+    /* width: 100%; */
+    width: 30rem;
+    height: auto;
+}
+
+.contenedorFirebaseLogoImg{
+    position: relative;
+    top: 0;
+    right: 0;
+    filter: none;
+    margin-top: 2rem;
+}
+
+.paginaCuatroBloqueTresInfo{
+    display: flex;
+}
+
+.paginaCuatroBloqueTresParrafo p{
+    font-size: 1.5rem;
+    margin-left: 1rem;
+}
+
+
+
+.contenedorGracias{
+    font-size: 2rem;
+    text-align: center;
+    background-color: #8f1212;
+}
+
+@media screen and (max-width: 800px){
+    /* ------------- PAGINA 1 ------------- */
+    .paginaUno{
+        width: 100vw;
+        height: calc(100vh - 8vh);
+        background: var(--negro-uno);
+    }
+    
+    .contenedorPaginaUno{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .paginaUnoLineas{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        margin: 1rem 0;
+    }
+    
+    .historiaTitulo{
+        font-size: 1.5rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .paginaUnoParrafo{
+        width: 80%;
+        font-size: 0.8rem;
+    }
+    
+    .infoPaginaUno{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 60vh;
+        /* width: 180%; */
+    }
+
+    .paginaUnoLineasImgs{
+        margin: 1rem 0;
+    }
+
+    .logoPagUnoimg{
+        width: 20%;
+        height: auto;
+    }
+
+
+
+
+    /* ------------- PAGINA 2 ------------- */
+
+    .conector{
+        display: none;
+    }
+
+    .paginaDosInfos{
+        width: 90%;
+        margin-top: 0rem;
+        margin-bottom: 2rem;
+    }
+
+    .paginaDosInfos h4{
+        border: solid 1px #d6d6d6;
+        border-top: 0px;
+        text-align: center;
+        font-weight: 400;
+        font-size: 1.2rem;
+        padding: 16px 5px 10px 5px;
+        border-radius: 0px 0px 0px 0px;
+        /* white-space: nowrap; */
+    }
+    .paginaDosInfos p{
+        border: solid 1px #d6d6d6;
+        padding: 1.5rem 1rem 1rem 1rem;
+        font-size: 0.8rem;
+        border-radius: 0px 0px 5px 5px;
+    }
+    
+    .paginaDosLineas{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .paginaDosContenedoresImgs{
+        width: 100%;
+        background-color: #262626;
+        padding: 1rem;
+        border-radius: 0rem;
+    }
+
+    .mapaDeSitioDosInfo p{
+        border-top: 0px;
+    }
+
+
+
+
+    /* ------------- PAGINA 3 ------------- */
+     
+    .paginaTres{
+        display: flex;
+        /* justify-content: center; */
+    }   
+
+    .contenedorPaginaTres{
+        width: 100%;
+        margin: 5rem 0;
+    }
+
+    .paginaTresLineas{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .paginaTresLineasIzquierda{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .herramientaImg{
+        /* width: 60%; */
+        height: auto;
+    }
+
+    .paginaTresBloques{
+        width: 100%;
+        margin: 2rem 0;
+        margin-left: 2rem;
+    }
+
+    .bloqueParrafo{
+        width: 75%;
+    }
+    
+    .bloqueParrafo p{
+        /* width: 60%; */
+        font-size: 1.1rem;
+        margin-top: 1.5rem;
+    }
+
+    .conHerramientaImgs{
+        width: 20rem;
+    }
+
+
+
+
+
+    /* ------------- PAGINA 3 ------------- */
+    .paginaCuatro{
+        background-color: #A61414;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .paginaCuatroLineas{
+        margin: 2rem 1.5rem;
+    }
+    
+    .contenedorPaginaCuatro{
+        width: 100%;
+        margin: 5rem 0;
+    }
+
+    .capturas{
+        /* width: 100%; */
+        width: 11rem;
+        height: auto;
+    }
+
+    .contenedoresLogosImg{
+        position: absolute;
+        right: -1.2rem;
+        bottom: -1.2rem;
+    }
+
+    .imgLogos{
+        width: 90%;
+        height: auto;
+    }
+
+    .paginaCuatroBloquesParrafos p{
+        font-size: 1rem;
+        margin-left: 0.3rem;
+    }    
+
+    .contenedorFirebaseLogoImg{
+        position: relative;
+        top: 0;
+        right: 0;
+        filter: none;
+        margin-top: 2rem;
+    }
+
 }

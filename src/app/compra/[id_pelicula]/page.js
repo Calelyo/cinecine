@@ -254,7 +254,7 @@ export default function Compra({ params }){
                 {
                 confirmacion && 
                 <div className={styles.confirmaciónContenedor}>
-                    <div className={styles.confirmaciónCaja}>
+                    <div className={styles.confirmacionCaja}>
                         <p className={styles.mensajeConfirmacion}>
                             Estas a pundo de comprar {cantidadEntradas} entradas para {funcionesPelicula[0].nombre} en {tresD?'3D':'2D'} y {subtitulada?'subtitulada':'en idioma original'}.
                         </p>

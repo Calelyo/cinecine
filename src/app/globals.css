@@ -118,3 +118,23 @@ body {
   width: 2.2rem;
   height: auto;
 }
+
+
+@media screen and (max-width: 1370px){
+  .cinecineLogo{
+    width: 20%;
+    height: auto;
+  }
+  
+  .infoImg{
+    width: 1.8rem;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 800px){
+  .cinecineLogo{
+    width: 30%;
+    height: auto;
+  }
+}
