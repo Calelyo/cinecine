@@ -281,14 +281,14 @@ export default function Home() {
 
       <div className={styles.funciones}>
 
-      {funcionesActuales.map(({id, id_pelicula, poster, nombre}, i) => (
+      {funcionesActuales.map(({id, id_pelicula, poster, nombre_url, nombre}, i) => (
         poster != '' &&
         <div className={styles.posterContenido} key={id}>
           <div className={styles.posterIndividual}>
 
             {/* ¿CAMIAR ID POR nombre_url? */}
             {/* _${nombre} */}
-            <Link href={`/compra/${id_pelicula}_${nombre}_${datosUrl()}`}>
+            <Link href={`/compra/${id_pelicula}_${nombre_url}_${datosUrl()}`}>
                 <Image src={poster}
                   alt={nombre}
                   className={styles.postImgTemp}

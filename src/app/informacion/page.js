@@ -32,6 +32,7 @@ import reactCrearProyecto from '../img/capturas/reactCrearProyecto.png'
 import reactCaptura from '../img/capturas/reactCaptura.png'
 import firebaseCodigo from '../img/capturas/firebaseCodigo.png'
 import firebaseLogo from '../img/herramientas/firebaseLogo.png'
+import PantallaCarga from '../utilidad/PantallaCarga'
 
 
 export default function Informacion(){
@@ -48,8 +49,8 @@ export default function Informacion(){
             150)
         }
     })
-
-    return(
+  
+  return(
         <section className={styles.seccionInfo}>
             <div className={styles.contenedorInformacionToda}>
                 <section className={styles.paginaUno}>
@@ -369,4 +370,5 @@ export default function Informacion(){
             <Footer />
         </section>
     )
+    
 }

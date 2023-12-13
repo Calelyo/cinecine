@@ -15,7 +15,8 @@ export const Funciones = [
             horario: 1400,
             estreno: peliculas[0].estreno,
             poster: peliculas[0].poster,
-            imagen: peliculas[0].imagen
+            imagen: peliculas[0].imagen,
+            nombre_url: peliculas[0].nombre_url
         },
         {
             id: 1,
@@ -29,7 +30,8 @@ export const Funciones = [
             horario: 1900,
             estreno: peliculas[0].estreno,
             poster: peliculas[0].poster,
-            imagen: peliculas[0].imagen
+            imagen: peliculas[0].imagen,
+            nombre_url: peliculas[0].nombre_url
         },
         {
             id: 2,
@@ -43,7 +45,8 @@ export const Funciones = [
             horario: 2200,
             estreno: peliculas[0].estreno,
             poster: peliculas[0].poster,
-            imagen: peliculas[0].imagen
+            imagen: peliculas[0].imagen,
+            nombre_url: peliculas[0].nombre_url
         },
         {
             id: 3,
@@ -57,7 +60,8 @@ export const Funciones = [
             horario: 1400,
             estreno: peliculas[1].estreno,
             poster: peliculas[1].poster,
-            imagen: peliculas[1].imagen
+            imagen: peliculas[1].imagen,
+            nombre_url: peliculas[1].nombre_url
         },
         {
             id: 4,
@@ -71,7 +75,8 @@ export const Funciones = [
             horario: 1900,
             estreno: peliculas[1].estreno,
             poster: peliculas[1].poster,
-            imagen: peliculas[1].imagen
+            imagen: peliculas[1].imagen,
+            nombre_url: peliculas[1].nombre_url
         },
         {
             id: 5,
@@ -85,7 +90,8 @@ export const Funciones = [
             horario: 2200,
             estreno: peliculas[1].estreno,
             poster: peliculas[1].poster,
-            imagen: peliculas[1].imagen
+            imagen: peliculas[1].imagen,
+            nombre_url: peliculas[1].nombre_url
         },
         {
             id: 6,
@@ -99,7 +105,8 @@ export const Funciones = [
             horario: 1900,
             estreno: peliculas[2].estreno,
             poster: peliculas[2].poster,
-            imagen: peliculas[2].imagen
+            imagen: peliculas[2].imagen,
+            nombre_url: peliculas[2].nombre_url
         },
         {
             id: 7,
@@ -113,7 +120,8 @@ export const Funciones = [
             horario: 2200,
             estreno: peliculas[2].estreno,
             poster: peliculas[2].poster,
-            imagen: peliculas[2].imagen
+            imagen: peliculas[2].imagen,
+            nombre_url: peliculas[2].nombre_url
         },
         {
             id: 8,
@@ -127,7 +135,8 @@ export const Funciones = [
             horario: 1400,
             estreno: peliculas[3].estreno,
             poster: peliculas[3].poster,
-            imagen: peliculas[3].imagen
+            imagen: peliculas[3].imagen,
+            nombre_url: peliculas[3].nombre_url
         },
         {
             id: 9,
@@ -141,7 +150,8 @@ export const Funciones = [
             horario: 1900,
             estreno: peliculas[3].estreno,
             poster: peliculas[3].poster,
-            imagen: peliculas[3].imagen
+            imagen: peliculas[3].imagen,
+            nombre_url: peliculas[3].nombre_url
         },
         {
             id: 10,
@@ -155,7 +165,8 @@ export const Funciones = [
             horario: 2200,
             estreno: peliculas[3].estreno,
             poster: peliculas[3].poster,
-            imagen: peliculas[3].imagen
+            imagen: peliculas[3].imagen,
+            nombre_url: peliculas[3].nombre_url
         },
         {
             id: 11,
@@ -169,7 +180,8 @@ export const Funciones = [
             horario: 1400,
             estreno: peliculas[4].estreno,
             poster: peliculas[4].poster,
-            imagen: peliculas[4].imagen
+            imagen: peliculas[4].imagen,
+            nombre_url: peliculas[4].nombre_url
         },
         {
             id: 12,
@@ -183,7 +195,8 @@ export const Funciones = [
             horario: 1900,
             estreno: peliculas[4].estreno,
             poster: peliculas[4].poster,
-            imagen: peliculas[4].imagen
+            imagen: peliculas[4].imagen,
+            nombre_url: peliculas[4].nombre_url
         },
         {
             id: 13,
@@ -197,7 +210,8 @@ export const Funciones = [
             horario: 1900,
             estreno: peliculas[5].estreno,
             poster: peliculas[5].poster,
-            imagen: peliculas[5].imagen
+            imagen: peliculas[5].imagen,
+            nombre_url: peliculas[5].nombre_url
         },
         {
             id: 14,
@@ -211,7 +225,8 @@ export const Funciones = [
             horario: 2200,
             estreno: peliculas[5].estreno,
             poster: peliculas[5].poster,
-            imagen: peliculas[5].imagen
+            imagen: peliculas[5].imagen,
+            nombre_url: peliculas[5].nombre_url
         },
         {
             id: 15,
@@ -225,7 +240,8 @@ export const Funciones = [
             horario: 1400,
             estreno: peliculas[6].estreno,
             poster: peliculas[6].poster,
-            imagen: peliculas[6].imagen
+            imagen: peliculas[6].imagen,
+            nombre_url: peliculas[6].nombre_url
         },
         {
             id: 16,
@@ -239,7 +255,8 @@ export const Funciones = [
             horario: 1900,
             estreno: peliculas[6].estreno,
             poster: peliculas[6].poster,
-            imagen: peliculas[6].imagen
+            imagen: peliculas[6].imagen,
+            nombre_url: peliculas[6].nombre_url
         },
         {
             id: 17,
@@ -253,7 +270,8 @@ export const Funciones = [
             horario: 2200,
             estreno: peliculas[6].estreno,
             poster: peliculas[6].poster,
-            imagen: peliculas[6].imagen
+            imagen: peliculas[6].imagen,
+            nombre_url: peliculas[6].nombre_url
         },
         {
             id: 18,
@@ -267,7 +285,8 @@ export const Funciones = [
             horario: 1400,
             estreno: peliculas[7].estreno,
             poster: peliculas[7].poster,
-            imagen: peliculas[7].imagen
+            imagen: peliculas[7].imagen,
+            nombre_url: peliculas[7].nombre_url
         },
         {
             id: 19,
@@ -281,7 +300,8 @@ export const Funciones = [
             horario: 1900,
             estreno: peliculas[7].estreno,
             poster: peliculas[7].poster,
-            imagen: peliculas[7].imagen
+            imagen: peliculas[7].imagen,
+            nombre_url: peliculas[7].nombre_url
         },
         {
             id: 20,
@@ -295,7 +315,8 @@ export const Funciones = [
             horario: 2200,
             estreno: peliculas[7].estreno,
             poster: peliculas[7].poster,
-            imagen: peliculas[7].imagen
+            imagen: peliculas[7].imagen,
+            nombre_url: peliculas[7].nombre_url
         },
         {
             id: 21,
@@ -309,7 +330,8 @@ export const Funciones = [
             horario: 1400,
             estreno: peliculas[8].estreno,
             poster: peliculas[8].poster,
-            imagen: peliculas[8].imagen
+            imagen: peliculas[8].imagen,
+            nombre_url: peliculas[8].nombre_url
         },
         {
             id: 22,
@@ -323,7 +345,8 @@ export const Funciones = [
             horario: 1900,
             estreno: peliculas[8].estreno,
             poster: peliculas[8].poster,
-            imagen: peliculas[8].imagen
+            imagen: peliculas[8].imagen,
+            nombre_url: peliculas[8].nombre_url
         },
         {
             id: 23,
@@ -337,7 +360,8 @@ export const Funciones = [
             horario: 2200,
             estreno: peliculas[8].estreno,
             poster: peliculas[8].poster,
-            imagen: peliculas[8].imagen
+            imagen: peliculas[8].imagen,
+            nombre_url: peliculas[8].nombre_url
         },
         {
             id: 24,
@@ -351,7 +375,8 @@ export const Funciones = [
             horario: 1900,
             estreno: peliculas[9].estreno,
             poster: peliculas[9].poster,
-            imagen: peliculas[9].imagen
+            imagen: peliculas[9].imagen,
+            nombre_url: peliculas[9].nombre_url
         },
         {
             id: 25,
@@ -365,7 +390,8 @@ export const Funciones = [
             horario: 2200,
             estreno: peliculas[9].estreno,
             poster: peliculas[9].poster,
-            imagen: peliculas[9].imagen
+            imagen: peliculas[9].imagen,
+            nombre_url: peliculas[9].nombre_url
         },
         {
             id: 26,
@@ -379,7 +405,8 @@ export const Funciones = [
             horario: 1900,
             estreno: peliculas[10].estreno,
             poster: peliculas[10].poster,
-            imagen: peliculas[10].imagen
+            imagen: peliculas[10].imagen,
+            nombre_url: peliculas[10].nombre_url
         },
         {
             id: 27,
@@ -393,7 +420,8 @@ export const Funciones = [
             horario: 2200,
             estreno: peliculas[10].estreno,
             poster: peliculas[10].poster,
-            imagen: peliculas[10].imagen
+            imagen: peliculas[10].imagen,
+            nombre_url: peliculas[10].nombre_url
         },
         {
             id: 28,
@@ -407,7 +435,8 @@ export const Funciones = [
             horario: 1400,
             estreno: peliculas[11].estreno,
             poster: peliculas[11].poster,
-            imagen: peliculas[11].imagen
+            imagen: peliculas[11].imagen,
+            nombre_url: peliculas[11].nombre_url
         },
         {
             id: 29,
@@ -421,7 +450,8 @@ export const Funciones = [
             horario: 1900,
             estreno: peliculas[11].estreno,
             poster: peliculas[11].poster,
-            imagen: peliculas[11].imagen
+            imagen: peliculas[11].imagen,
+            nombre_url: peliculas[11].nombre_url
         },
         {
             id: 30,
@@ -435,7 +465,8 @@ export const Funciones = [
             horario: 2200,
             estreno: peliculas[11].estreno,
             poster: peliculas[11].poster,
-            imagen: peliculas[11].imagen
+            imagen: peliculas[11].imagen,
+            nombre_url: peliculas[11].nombre_url
         },
         {
             id: 31,
@@ -449,7 +480,8 @@ export const Funciones = [
             horario: 1400,
             estreno: peliculas[12].estreno,
             poster: peliculas[12].poster,
-            imagen: peliculas[12].imagen
+            imagen: peliculas[12].imagen,
+            nombre_url: peliculas[12].nombre_url
         },
         {
             id: 32,
@@ -463,7 +495,8 @@ export const Funciones = [
             horario: 1900,
             estreno: peliculas[12].estreno,
             poster: peliculas[12].poster,
-            imagen: peliculas[12].imagen
+            imagen: peliculas[12].imagen,
+            nombre_url: peliculas[12].nombre_url
         },
         {
             id: 33,
@@ -477,7 +510,8 @@ export const Funciones = [
             horario: 2200,
             estreno: peliculas[12].estreno,
             poster: peliculas[12].poster,
-            imagen: peliculas[12].imagen
+            imagen: peliculas[12].imagen,
+            nombre_url: peliculas[12].nombre_url
         },
         {
             id: 34,
@@ -491,7 +525,8 @@ export const Funciones = [
             horario: 1400,
             estreno: peliculas[13].estreno,
             poster: peliculas[13].poster,
-            imagen: peliculas[13].imagen
+            imagen: peliculas[13].imagen,
+            nombre_url: peliculas[13].nombre_url
         },
         {
             id: 35,
@@ -505,7 +540,8 @@ export const Funciones = [
             horario: 1900,
             estreno: peliculas[13].estreno,
             poster: peliculas[13].poster,
-            imagen: peliculas[13].imagen
+            imagen: peliculas[13].imagen,
+            nombre_url: peliculas[13].nombre_url
         },
         {
             id: 36,
@@ -519,6 +555,7 @@ export const Funciones = [
             horario: 2200,
             estreno: peliculas[13].estreno,
             poster: peliculas[13].poster,
-            imagen: peliculas[13].imagen
+            imagen: peliculas[13].imagen,
+            nombre_url: peliculas[13].nombre_url
         },
     ]

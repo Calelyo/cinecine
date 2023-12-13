@@ -11,7 +11,8 @@ export const Peliculas = [
             estreno: true,
             poster:  postersPeliculas('./lluvia_en_el_desierto.jpg'),
             imagen: imagenesPeliculas('./lluvia_en_el_desierto_portada.png'),
-            hay_funcion: true
+            hay_funcion: true,
+            nombre_url: 'lluvia_del_desierto'
         },
         {
             id: 1,
@@ -21,7 +22,8 @@ export const Peliculas = [
             estreno: false,
             poster:  postersPeliculas('./no_creo_en_heroes.jpg'),
             imagen: imagenesPeliculas('./no_creo_en_heroes_portada.png'),
-            hay_funcion: true
+            hay_funcion: true,
+            nombre_url: 'no_creo_en_heroes',
         },
         {
             id: 2,
@@ -31,7 +33,8 @@ export const Peliculas = [
             estreno: false,
             poster:  postersPeliculas('./prestame_un_sentimiento.jpg'),
             imagen: imagenesPeliculas('./prestame_un_sentimiento_portada.png'),
-            hay_funcion: true
+            hay_funcion: true,
+            nombre_url: 'prestame_un_sentimiento',
         },
         {
             id: 3,
@@ -41,7 +44,8 @@ export const Peliculas = [
             estreno: true,
             poster:  postersPeliculas('./el_polo_sur_de_la_luna.jpg'),
             imagen: imagenesPeliculas('./el_polo_sur_de_la_luna_portada.png'),
-            hay_funcion: true
+            hay_funcion: true,
+            nombre_url: 'el_polo_sur_de_la_luna',
         },
         {
             id: 4,
@@ -51,7 +55,8 @@ export const Peliculas = [
             estreno: false,
             poster:  postersPeliculas('./sanguchito_de_miga.jpg'),
             imagen: imagenesPeliculas('./sanguchito_de_miga_portada.png'),
-            hay_funcion: true
+            hay_funcion: true,
+            nombre_url: 'sanguchito_de_miga',
         },
         {
             id: 5,
@@ -61,7 +66,8 @@ export const Peliculas = [
             estreno: false,
             poster: '',
             imagen: '',
-            hay_funcion: false
+            hay_funcion: false,
+            nombre_url: 'como_tocar_el_bandoneon',
         },
         {
             id: 6,
@@ -71,7 +77,8 @@ export const Peliculas = [
             estreno: false,
             poster:  postersPeliculas('./la_hora_del_reloj.jpg'),
             imagen: imagenesPeliculas('./la_hora_del_reloj_portada.png'),
-            hay_funcion: true
+            hay_funcion: true,
+            nombre_url: 'la_hora_del_reloj',
         },
         {
             id: 7,
@@ -81,7 +88,8 @@ export const Peliculas = [
             estreno: true,
             poster:  postersPeliculas('./azul.jpg'),
             imagen: imagenesPeliculas('./azul_portada.png'),
-            hay_funcion: true
+            hay_funcion: true,
+            nombre_url: 'azul',
         },
         {
             id: 8,
@@ -91,7 +99,8 @@ export const Peliculas = [
             estreno: false,
             poster: '',
             imagen: '',
-            hay_funcion: false
+            hay_funcion: false,
+            nombre_url: 'maestro_y_estudiante',
         },
         {
             id: 9,
@@ -101,7 +110,8 @@ export const Peliculas = [
             estreno: false,
             poster:  postersPeliculas('./falso.jpg'),
             imagen: imagenesPeliculas('./falso_portada.png'),
-            hay_funcion: true
+            hay_funcion: true,
+            nombre_url: 'falso',
         },
         {
             id: 10,
@@ -111,7 +121,8 @@ export const Peliculas = [
             estreno: false,
             poster:  postersPeliculas('./dedo_sangriento.jpg'),
             imagen: imagenesPeliculas('./dedo_sangriento_portada.png'),
-            hay_funcion: true
+            hay_funcion: true,
+            nombre_url: 'dedo_sangriento',
         },
         {
             id: 11,
@@ -121,7 +132,8 @@ export const Peliculas = [
             estreno: false,
             poster:  postersPeliculas('./adoquines.jpg'),
             imagen: imagenesPeliculas('./adoquines_portada.png'),
-            hay_funcion: true
+            hay_funcion: true,
+            nombre_url: 'adoquines',
         },
         {
             id: 12,
@@ -131,7 +143,8 @@ export const Peliculas = [
             estreno: false,
             poster:  postersPeliculas('./sospecha_infinita.jpg'),
             imagen: imagenesPeliculas('./sospecha_infinita_portada.png'),
-            hay_funcion: true
+            hay_funcion: true,
+            nombre_url: 'sospecha_infinita',
         },
         {
             id: 13,
@@ -141,6 +154,7 @@ export const Peliculas = [
             estreno: false,
             poster:  postersPeliculas('./vida_y_obra.jpg'),
             imagen: imagenesPeliculas('./vida_y_obra_portada.png'),
-            hay_funcion: true
+            hay_funcion: true,
+            nombre_url: 'vida_y_obra',
         },
     ]
